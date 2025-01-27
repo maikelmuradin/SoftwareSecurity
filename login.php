@@ -1,42 +1,23 @@
 <?php
 include('header.php');
-
-    if(isset($_REQUEST['submit'])){
-        if(checkInlog()){
-            header('Location: home.php');
-            exit();
-        }else{
-            header('Location: login.php');
-            exit();
-        }
-        
-    }
-
-    function checkInlog(){
-        return(0);
-    }
 ?>
 <body>
     <div class="conntainer m-4 " style="width:40%" >
         <h2>Inloggen</h2>
-        
-        <form action="" method="post" >
+        <form action="" method="GET" >
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-            
+            <label  class="form-label">Gebruikersnaam</label>
+            <input type="text" class="form-control" name="gebruikersNaam" >
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
+            <label  class="form-label">Wachtwoord</label>
+            <input type="password" class="form-control" name="wachtwoord">
           </div>
           
           <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
 
-    </div>
-    
+    </div>   
 </body>
-
 
 <?php include('footer.php'); ?>

@@ -26,22 +26,22 @@ USE db01;
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `users`
+-- Tabelstructuur voor tabel `gebruikers`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `gebruikers` (
   `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
+  `gebruikersNaam` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `wachtwoord` varchar(255) NOT NULL,
   `role` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Gegevens worden geëxporteerd voor tabel `users`
+-- Gegevens worden geëxporteerd voor tabel `gebruikers`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
+INSERT INTO `gebruikers` (`id`, `gebruikersNaam`, `email`, `wachtwoord`, `role`) VALUES
 (1, 'Maikel', 'maikel@talland.nl', 'Welkom01', 'admin'),
 (2, 'Jan', 'jan@talland.nl', 'Welkom01', 'viewer'),
 (3, 'Mohammed', 'mohammed@talland.nl', 'Welkom01', 'editor');
@@ -51,9 +51,9 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
 --
 
 --
--- Indexen voor tabel `users`
+-- Indexen voor tabel `gebruikers`
 --
-ALTER TABLE `users`
+ALTER TABLE `gebruikers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -61,9 +61,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT voor een tabel `users`
+-- AUTO_INCREMENT voor een tabel `gebruikers`
 --
-ALTER TABLE `users`
+ALTER TABLE `gebruikers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
